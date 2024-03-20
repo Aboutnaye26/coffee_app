@@ -26,3 +26,19 @@ def get_coffee_choice():
                 print("You haven't added any coffees to your order. Please add at least one coffee.")
         else:
             print("Invalid choice. Please choose a number between 1 and 5.")
+
+
+def get_topping_choices():
+    print("\nWould you like to add any toppings? (Enter 'done' when finished)")
+    print("1. Extra Cream - $0.50")
+    print("2. Milk - $0.80")
+    print("3. Sugar - $0.70")
+    toppings = []
+    while True:
+        choice = input("Enter your choice (1-3 or 'done'): ")
+        if choice in ['1', '2', '3']:
+            toppings.append(int(choice))
+        elif choice.lower() == 'done':
+            return toppings
+        else:
+            print("Invalid choice. Please choose a number between 1 and 3 or 'done'.")
