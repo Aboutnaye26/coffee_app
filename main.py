@@ -1,5 +1,6 @@
 import time
 
+
 def display_menu():
     print("Welcome to our Coffee Shop!")
     print("Please choose your coffee:")
@@ -8,4 +9,4 @@ def display_menu():
     print("3. Cappuccino - $4.00")
     print("4. Espresso - $2.50")
     print("5. Finish order")
-
+    # This is the entire menu
