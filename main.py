@@ -42,3 +42,14 @@ def get_topping_choices():
             return toppings
         else:
             print("Invalid choice. Please choose a number between 1 and 3 or 'done'.")
+
+
+def calculate_total(coffee_choices, topping_choices_list):
+    coffee_prices = [3.00, 3.50, 4.00, 2.50]
+    topping_prices = [0.50, 0.80, 0.70]
+    total = 0
+    for i, coffee_choice in enumerate(coffee_choices):
+        total += coffee_prices[coffee_choice - 1]
+        for topping_choice in topping_choices_list[i]:
+            total += topping_prices[topping_choice - 1]
+    return total
